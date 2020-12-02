@@ -1,0 +1,19 @@
+./assign_2 -i hpy414_decryptme_128.txt -o hpy414_encryptme_128.txt -p hpy414 -b 128 -d
+cat hpy414_encryptme_128.txt
+
+./assign_2 -i encryptme_256.txt -o decryptme_256.txt -p TUC2013030115 -b 256 -e
+cat decryptme_256.txt
+
+./assign_2 -i decryptme_256.txt -o encryptme_256.txt -p TUC2013030115 -b 256 -d
+cat encryptme_256.txt
+
+./assign_2 -i signme_128.txt -o verifyme_128.txt -p TUC2013030115 -b 128 -s
+./assign_2 -i verifyme_128.txt -o verified_128.txt -p TUC2013030115 -b 128 -v
+cat verified_128.txt
+
+./assign_2 -i hpy414_verifyme_128.txt -o hpy414_verified_128.txt -p hpy414 -b 128 -v
+cat hpy414_verified_128.txt
+
+./assign_2 -i hpy414_verifyme_256.txt -o hpy414_verified_256.txt -p hpy414 -b 256 -v
+cat hpy414_verified_256.txt
+
