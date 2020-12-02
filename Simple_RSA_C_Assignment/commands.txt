@@ -1,0 +1,25 @@
+make clean
+
+make
+
+./assign_3 -g
+
+./assign_3 -i hpy414_encryptme_pub.txt -o TUC2013030115_encrypted_pub.txt -k hpy414_public.key -e
+
+./assign_3 -i TUC2013030115_encrypted_pub.txt -o output1.txt -k hpy414_private.key -d
+
+cat output1.txt
+
+./assign_3 -i hpy414_decryptme_pub.txt -o TUC2013030115_decrypted_pub.txt -k hpy414_public.key -d
+
+cat TUC2013030115_decrypted_pub.txt
+
+./assign_3 -i hpy414_encryptme_priv.txt -o TUC2013030115_encrypted_priv.txt -k hpy414_private.key -e
+
+./assign_3 -i TUC2013030115_encrypted_priv.txt -o output2.txt -k hpy414_public.key -d
+
+cat output2.txt
+
+./assign_3 -i hpy414_decryptme_priv.txt -o TUC2013030115_decrypted_priv.txt -k hpy414_private.key -d
+
+cat TUC2013030115_decrypted_pub.txt
