@@ -1,0 +1,19 @@
+/*This is a readme file to explain the implemetation of the given
+assignment.*/
+
+In this assignment we were asked to develop a simple firewall that blocks
+ads using iptables.
+
+More specifically, the tool gets as input domain names text file and resolves
+each domain name to ip addresses. Then it makes rules based on these ip addresses
+and stores ip addresses to apropriate file.
+
+Also it can make rules based on the ip addresses text file.
+
+This tool can also save the rules to a file, load rules from file, list rules
+and reset existing rules.
+
+Answer to question 1:
+This tool blocks ads by rejecting connection to the ad website. This means
+that the ad site cannot be accessed. Some ads persist because they are placed
+on the application level of the website (i.e. popup ads).
