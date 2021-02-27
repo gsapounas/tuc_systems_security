@@ -1,0 +1,35 @@
+/*This is a readme file to explain the implemetation of the given
+assignment.*/
+
+In this assignment we were asked to develop a script that generates
+input to exploit buffer overflow vulnerability.
+
+The implementation is based on the fact that the Name array of the given program
+is marked as executable with the mprotect. This means that the programmer introduced
+an extra vulnerability in the program so it is easier to exploit this rather than
+disabling ASLR and running the shellcode inside the stack.
+
+Brief explanation how this exploit works:
+
+1)Overflow buffer on the stack with InputGenerator output.
+2)Program copies buffer into Name array (which is placed in executable segment of memory)
+3)Jump into Name array starting address + 4 bytes (where noops are placed)
+4)Shell code executes and gives us a user level shell.
+
+In the beginning I run the Greeter program giving it a long string as
+input, in order to find the right amount of character input allows me
+to find and control the instruction pointer.
+
+After finding the eip value and the buffer size, I introduced some no nops
+in order to execute the shellcode even if the memory addresses change slightly.
+
+At last, I introduced the shellcode that spawns a user level shell.
+
+How to run:
+
+1) Run input generator and feed generated input to program:
+(python InputGenerator.py ; cat) | ./Greeter
+OR by feeding exploit_input directly to program
+(cat ./exploit_input; cat) | ./Greeter
+
+Shellcode is a test program that spawns a user level shell, made for testing purposes.
