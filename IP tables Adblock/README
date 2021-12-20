@@ -5,8 +5,8 @@ In this assignment we were asked to develop a simple firewall that blocks
 ads using iptables.
 
 More specifically, the tool gets as input domain names text file and resolves
-each domain name to ip addresses. Then it makes rules based on these ip addresses
-and stores ip addresses to apropriate file.
+each domain name to ip addresses. Then it makes rules based on these ip 
+addresses and stores ip addresses to apropriate file.
 
 Also it can make rules based on the ip addresses text file.
 

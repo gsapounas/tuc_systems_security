@@ -11,9 +11,10 @@ To do that, pcap_open_live and pcap_open_offline were used.
 
 In order to tell if a TCP packet is retransmitted, TCP packets were stored
 in an array and each time the tool captures a new packet it checks if
-the packet has been retransmitted with same ack number, seq number - 1 different than current ack number, different sequence number, less_or_equal
-payload size and fin or syn flags enabled or payload size > 0.
+the packet has been retransmitted with same ack number, seq number - 1 different 
+than current ack number, different sequence number, less_or_equal payload size 
+and fin or syn flags enabled or payload size > 0.
 
-For UDP packets we can't tell at the transport layer if a packet has been retransmitted,
-because UDP is a connectionless protocol and retransmissions are handled at the
-application layer.
+For UDP packets we can't tell at the transport layer if a packet has been 
+retransmitted, because UDP is a connectionless protocol and retransmissions are 
+handled at the application layer.
